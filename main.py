@@ -11,17 +11,15 @@ def FtoC(F):
     """to convert the given number from fahrenheit to celcius"""
     C = (0.55556)*(F-32)
     return C
+print('Enter 1 for Celcius to Fahrenheit or 2 for Fahrenheit to Celcius:')
 
 x = int(input())
-print('Enter x=1 for Celcius or x=2 for Fahrenheit:')
 if x == 1:
-    print(temperature1)
+    temperature1 = int(input('Enter your temperature in Celcius:'))
+    print(int(round(CtoF(temperature1))))
 elif x == 2:
-    print(temperature2)
+    temperature2 = int(input('Enter your temperature in Farenheit:'))
+    print(int(round(FtoC(temperature2))))
 else:
-    print(0)
+    print(Error)
 
-temperature1 = int(input('Enter your temperature in Farenheit:')
-print(int(round(FtoC(temperature1))))
-temperature2 = int(input('Enter your temperature in Celcius:')
-print(int(round(CtoF(temperature2))))
