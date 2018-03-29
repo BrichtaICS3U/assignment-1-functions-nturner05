@@ -16,10 +16,18 @@ print('Enter 1 for Celcius to Fahrenheit or 2 for Fahrenheit to Celcius:')
 x = int(input())
 if x == 1:
     temperature1 = int(input('Enter your temperature in Celcius:'))
-    print(int(round(CtoF(temperature1))))
+    if temperature1 < -273.15:
+        print('Invalid Temperature')
+        SystemExit
+    else:
+              print(int(round(CtoF(temperature1))))
 elif x == 2:
     temperature2 = int(input('Enter your temperature in Farenheit:'))
-    print(int(round(FtoC(temperature2))))
+    if temperature2 < -459.67:
+        print('Invalid Temperature')
+        SystemExit
+    else:
+              print(int(round(FtoC(temperature2))))
 else:
-    print(Error)
+              print('Error')
 
